@@ -1,0 +1,38 @@
+__________________________________________________Thought Note___________________________________________________
+
+In this assignment the student id, student name and gpa is given to insert the details of students.
+If the details exists then the particular record will be displayed else will generate an error.
+For finding the details of particular student the id is to  be given so that the particular record will get displayed
+Apart from all this we can also find the topper among them and display their detalis and can also find a specific record of a particular student.
+
+For performing all this tasks postman is to be used which is ued to perform the tasks which looks for the endpoints from the user and displays the messages specified through the if-else loops or according to the conditions specified. 
+*Apart from nodemon Thunder Client can also be used.
+
+Here are a list of following the endpoints which is used to get the particular details. These are as follows:
+-> POST /add
+    It is for posting or giving the student ID, student Name, gpa of a student which adds the details and displays the output mentioned for specific i.e. post method is used to take input from the user. In this the students is to be added through the post request. All we need to do is select the POST from the dropdwn and use the port number mentioned along with localhost and at last adding a backslash and add as the given path for post method.
+    The following path will work in postman: localhost:3000/add
+    After adding the path Body is to be selected from the below and after that raw is being selected using radio button and from the dropdown the default is serialization is given as text from which JSON is to be selected. Apart from JSON text can also be used but JSON is preferred as text is a little tricky to use.
+    
+-> GET /student:/id 
+    This method is uesd for getting the output of a given input defined by the user i.e. it displays the output according to the given condition. In this it is used to get the detail of a student according to the given id.
+    From the dropdown GET should be selected to see the correct output.
+    After adding the students if we want to see a student's detail then after the path a specified id of the student will be given which will display the details. 
+    Following is an example of this get method: localhost:3000/student/1
+
+-> GET /allStudents
+    This method is also used for getting the output, the only difference is of output as in this get method the details of all the students will be displayed.
+    After adding students we can get the details of all the students. Modify the path by replacing the student to allStudents.
+    Following is the example of get method to display details of all students: localhost:3000/allStudents
+
+-> GET /topper
+    This method is used for displaying the topper among the given students which will display the detail of  a student whose gpa is on the top among all the students.
+    We can send the request of a student to get topper of the class by replacing any of the path mentioned above and replacing it to topper.
+    Following is the example to get the topper among the students: localhost:3000/topper
+
+In node persist folder all the students which is to be added is displayed in the form of key value pair.
+The key is defined by the programmer, in this key is studentID and rest are pair along with studentID of that key.
+
+** We can start the file by executing npx nodemon <file_name>
+Firstly we need to install node_modules package, then
+Start the program by executing the command node final, node final.js, npx nodemon final or npx nodemon final.js as nodemon is helpful which makes the program start again if any changes is to be made in it.
